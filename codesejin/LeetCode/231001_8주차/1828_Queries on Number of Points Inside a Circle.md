@@ -14,7 +14,7 @@
 1. queries의 배열을 순회하면서 윈의 중심 (cx, cy), 반지름(r)을 가져옵니다.
 2. points배열을 순회하면서 각 포인트의 x,y좌표를 가져옵니다.
 3. 피타고라스 정리를 사용하여 점과 원의 중심 사이의 거리를 계산합니다.
-   4. 이부분은 잘 몰라서 블로그 [링크 참고](https://dundung.tistory.com/152)
+4. 이부분은 잘 몰라서 블로그 [링크 참고](https://dundung.tistory.com/152)
 
 ```java
 class Solution {
