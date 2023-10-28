@@ -27,7 +27,7 @@
    6. 2중 for문에 중복된 조회(계산)를 해야하므로 배열에 저장해서 인덱스로 가져오는 것보다 느려짐
 
 ```java
-// Input : "001011" , Output: [11,8,5,4,3,4]
+// Input : "0 0 1 0 1 1" , Output: [11,8,5,4,3,4]
 //        0 : 2 + 4 + 5;
 //        1 : 1 + 3 + 4
 class Solution {
@@ -37,7 +37,7 @@ class Solution {
         for (int i = 0; i < boxes.length(); i++) {
             int abs = 0;
             for (int j = 0; j < boxes.length(); j++) {
-                if (charArray[j] == '1'){
+                if (charArray[j] == '1'){ // charAt() - 찾기 > toCharArray() -> 배열 새성
                     abs += Math.abs(i - j);
                 }
             }
