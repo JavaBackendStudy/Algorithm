@@ -14,6 +14,8 @@
 
 - 재배치 후의 nums 배열을 반환하세요.
 
+## 풀이 설명
+1. 설명대로 Pivot보다 작은거, 큰거, 같은거 List로 구해서 answer배열에 차례대로 넣어줌
 
 ```java
 class Solution {
