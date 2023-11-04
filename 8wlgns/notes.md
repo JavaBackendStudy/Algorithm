@@ -25,12 +25,23 @@ O 표기사용법: O(데이터 크기 n에 대해 알고리즘의 수행시간�
 이는 n = 2의 x제곱과 같으며, 로그 함수의 도움을 받아 다음과 같이 정리할 수 있다.
 x = log2n (2를 x번 제곱하면 n이 나온다를 알려주는 수학 공식)
 ```
+#### logN
+
 ### 수학
 #### 점과 점 사이의 거리 공식
 ```
 루트{(x2 - x1)2(제곱) + (y2 - y1)2(제곱)}
 ```
-
-- String
-- StringBuilder
-- Collection
+### Collection
+#### PriorityQueue
+```
+<details>
+  <summary>Click me</summary>
+  
+  ### Heading
+  1. Foo
+  2. Bar
+     * Baz
+     * Qux
+</details>
+```
