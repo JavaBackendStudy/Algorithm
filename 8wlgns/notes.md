@@ -46,8 +46,53 @@ x = log2n (2를 x번 제곱하면 n이 나온다를 알려주는 수학 공식)
 ### Collection
 ```
 시간 복잡도
-Arrays.sort -> 평균 O(nlog(n))의 시간복잡도를 가지며 최악의 경우 O(n^2)이 될 수 있다.
-Priority queue -> 우선순위 큐는 배열에 저장하되 삽입/ 추출 시 기존 정렬 상태를 유지하기에 O(logn)의 시간복잡도를 유지한다.
+정렬 : Arrays.sort -> 평균 O(nlog(n))의 시간복잡도를 가지며 최악의 경우 O(n^2)이 될 수 있다.
+삽입 시 : Priority queue -> 우선순위 큐는 배열에 저장하되 삽입/ 추출 시 기존 정렬 상태를 유지하기에 O(logn)의 시간복잡도를 유지한다.
+
+widest-vertical-area [1637. Widest Vertical Area](problems/20231105_med_le_1637.md)
+for문 X(곱하기) 삽입시 시간 복잡도를 계산했어야 함. Arrays.sort(arr); 한 것이 훨씬 빨랐다.
+
+class Solution {
+    public int maxWidthOfVerticalArea(int[][] points) {
+        int arr[]=new int[points.length];
+        for(int i=0;i<points.length;i++){
+            arr[i]=points[i][0];
+        }
+
+        Arrays.sort(arr); // -> O(nlogn, 최악 O^2)
+        int max =0;
+        for(int i=0;i<points.length-1;i++){
+            if(arr[i+1]-arr[i]>max){
+                max=arr[i+1]-arr[i];
+            }
+        }
+        return max;
+    }
+}
+
+class Solution {
+    public int maxWidthOfVerticalArea(int[][] points) {
+        int answer = 0;
+        Queue<Integer> pq = new PriorityQueue<Integer>();
+        for(int i=0; i<points.length; i++) {
+        	pq.offer(points[i][0]); //삽입시 O (nlogn이나 위의 for O(n)과 곱할 시 n^2logn이 나올 수 있음.)
+        }
+        
+        int prev = (int) pq.poll(); 
+        int curr = 0;
+       
+        Object obj = null;
+        while((obj = pq.poll()) != null) {
+        	curr = (int) obj;
+        	if(curr - prev > answer) {
+        		answer = curr - prev;
+        	}
+        	prev = curr;
+        }
+        
+        return answer;
+    }
+}
 ```
 #### PriorityQueue
 ```
