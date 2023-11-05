@@ -1,5 +1,10 @@
 노트
 ------
+### 알아두면 좋을 것 
+```
+1. 랭크 구하기 : rank = 1로 하고, 랭크 구할 때 자신의 배열내 다른 값과 비교하며 더 큰 값이 있다면 rank++하는 식으로 구한다.
+```
+
 ### 시간복잡도
 ```
 뜻: 알고리즘 수행 시간을 대략적으로 나타내는 방법이다.
@@ -39,8 +44,18 @@ x = log2n (2를 x번 제곱하면 n이 나온다를 알려주는 수학 공식)
 프로그래머스에서는 양의 정수를 의미하는 것 같다. 지문에 따라 해석해야 할 것 같다.
 ```
 ### Collection
+```
+시간 복잡도
+Arrays.sort -> 평균 O(nlog(n))의 시간복잡도를 가지며 최악의 경우 O(n^2)이 될 수 있다.
+Priority queue -> 우선순위 큐는 배열에 저장하되 삽입/ 추출 시 기존 정렬 상태를 유지하기에 O(logn)의 시간복잡도를 유지한다.
+```
 #### PriorityQueue
 ```
 - 메서드
- 1. Object pq.poll() -> 왜 Object형으로 반환하나? 비어있으면 null을 반환하기에 Object obj로 받은 후, 형변환을 해야 한다.
+Object pq.poll() -> 왜 Object형으로 반환하나? 비어있으면 null을 반환하기에 Object obj로 받은 후, 형변환을 해야 한다.
+```
+### List
+```
+정렬/내림차순정렬 방법
+total.sort(Comparator.comparing(Integer::intValue).reversed());
 ```
