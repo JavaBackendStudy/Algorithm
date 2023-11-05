@@ -32,16 +32,15 @@ x = log2n (2를 x번 제곱하면 n이 나온다를 알려주는 수학 공식)
 ```
 루트{(x2 - x1)2(제곱) + (y2 - y1)2(제곱)}
 ```
+#### 자연수
+```
+수학에서 자연수(自然數, 영어: natural number)는 수를 셀 때나 순서를 매길 때 사용되는 수다.
+양의 정수(陽-整數, 영어: positive integer) 1, 2, 3, ...로 정의되거나, 음이 아닌 정수(陰-整數, 영어: non-negative integer) 0, 1, 2, 3, ...로 정의된다. 
+프로그래머스에서는 양의 정수를 의미하는 것 같다. 지문에 따라 해석해야 할 것 같다.
+```
 ### Collection
 #### PriorityQueue
 ```
-<details>
-  <summary>Click me</summary>
-  
-  ### Heading
-  1. Foo
-  2. Bar
-     * Baz
-     * Qux
-</details>
+- 메서드
+ 1. Object pq.poll() -> 왜 Object형으로 반환하나? 비어있으면 null을 반환하기에 Object obj로 받은 후, 형변환을 해야 한다.
 ```
