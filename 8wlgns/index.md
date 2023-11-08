@@ -14,4 +14,4 @@
   * [크기가작은부분문자열](problems/20231112_lv1_pr_크기가작은부분문자열.md)
 - 컬렉션
   * [1637. Widest Vertical Area](problems/20231105_med_le_1637.md)
-  
+  * [전국대회선발고사](problems/20231112_lv0_pr_전국대회선발고사.md)

@@ -104,3 +104,7 @@ Object pq.poll() -> 왜 Object형으로 반환하나? 비어있으면 null을 �
 정렬/내림차순정렬 방법
 total.sort(Comparator.comparing(Integer::intValue).reversed());
 ```
+### TreeMap
+```
+순회 하는 방법에 대해 알아보기. Iterator it = tree.entrySet().iterator(); 왜 set로 변환해야 하는 것일까?
+```
