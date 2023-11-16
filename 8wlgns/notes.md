@@ -113,6 +113,18 @@ Iterator it = tree.entrySet().iterator(); 왜 set로 변환해야 하는 것일�
 ```
 Q. TreeMap과 HashMap은 각각 언제 쓰이는 것일까?
 검색에 관한 대부분의 경우는 HashMap, 범위 검색이나 정렬이 필요한 경우는 TreeMap이라고 하는데 잘 모르겠다.
+- containsKey, get -> O(1)의 복잡도를 가진다 -> 내부적으로 key -> hash (int), tree node를 구성해서 값을 저장하는 것 같다.
+- HashTable보다 새로운 버전이라고 하며, 사용을 훨씬 더 많이 한다고 한다. 
+- add가 아닌 put함수를 사용하여 Object타입으로 저장한다.
+- 키는 중복 비허용, 데이터는 중복 허용이라고 한다.
+- 순회 방법
+ 	  Set set = map.entrySet(); //set로 변환
+        Iterator it = set.iterator();
+        String answer = "";
+        while(it.hasNext()) {
+        	Map.Entry e = (Map.Entry) it.next(); //map의 특징 (key, value)을 묶어서 하나의 데이터(entry)로 저장함
+        	answer = e.getKey().toString();
+        }
 ```
 ### TreeSet과 TreeMap의 기반이 되는 binary search tree
 ``` 
