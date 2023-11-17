@@ -86,3 +86,35 @@ Runtime : 35 ms
 Memory: 48.6 MB
 ```
 
+## 문제 풀이 3
+
+1. Character를 String으로 형변환하는 과정에서 불필요한 메모리가 사용되고, 비효율적이라고 생각함
+2. 오직 Charater로만 사용
+3. Charater를 모두 map에 넣되, 이미 포함되어있는 key일 경우 map clear하고, 카운팅 ++
+
+```java
+import java.util.HashMap;
+
+class Solution {
+    public int partitionString(String s) {
+        int answer = 1;
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char target = s.charAt(i);
+
+            if (map.containsKey(target)) {
+                map.clear();
+                answer++;
+            }
+            map.put(target, 1);
+        }
+        return answer;
+    }
+}
+```
+
+```text
+Runtime : 33 ms
+Memory: 44.82 MB
+```
