@@ -27,6 +27,8 @@ import java.util.*;
 
 public class Solution {
     public int[] restoreArray(int[][] adjacentPairs) {
+//        Input: adjacentPairs = {{4,-10},{-1,3},{4,-3},{-3,3}};
+//        Output: [-1,3,-3,4,-10]
         Map<Integer, List<Integer>> adjacentMap = new HashMap<>();
 
         // 인접한 숫자들을 해시 맵에 저장
