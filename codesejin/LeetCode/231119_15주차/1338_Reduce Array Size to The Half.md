@@ -11,7 +11,7 @@
 ```java
 
 public class Solution {
-    public int minSetSize(int[] arr) { // input = [3,3,3,3,5,5,5,2,2,7]
+    public int minSetSize(int[] arr) { 
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int num : arr) {
             map.put(num, map.getOrDefault(num, 0) + 1);
@@ -23,9 +23,9 @@ public class Solution {
 
         int count = 0;
         int setSize = 0;
-
+        
         while (!maxHeap.isEmpty()) {
-            int key = maxHeap.poll();
+            int key = maxHeap.poll(); 
             count += map.get(key);
             setSize++;
 

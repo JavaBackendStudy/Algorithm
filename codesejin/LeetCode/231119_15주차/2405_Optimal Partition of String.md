@@ -99,11 +99,9 @@ class Solution {
     public int partitionString(String s) {
         int answer = 1;
         HashMap<Character, Integer> map = new HashMap<>();
-
         for (int i = 0; i < s.length(); i++) {
             char target = s.charAt(i);
-
-            if (map.containsKey(target)) {
+            if (map.containsKey(target)) { 
                 map.clear();
                 answer++;
             }

@@ -25,7 +25,6 @@ class Solution {
     public int longestDecomposition(String text) {
         int answer = 1;
         int n = text.length();
-
         for (int idx = 1; idx <= n / 2; idx++) {
             String prefix = text.substring(0, idx);
             String suffix = text.substring(n - idx, n);
