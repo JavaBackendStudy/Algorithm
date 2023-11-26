@@ -50,6 +50,7 @@ class Solution {
                 res[stack.peek()]++;
                 System.out.println("2 : " + Arrays.toString(res));
             }
+            stack.add(i);
         }
         return result;
     }
