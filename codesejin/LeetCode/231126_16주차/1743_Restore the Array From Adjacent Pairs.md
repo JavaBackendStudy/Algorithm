@@ -58,7 +58,6 @@ public class Solution {
                 if (!visited.contains(neighbor)) {
                     result[i] = neighbor;
                     visited.add(neighbor);
-                    break;
                 }
             }
         }
